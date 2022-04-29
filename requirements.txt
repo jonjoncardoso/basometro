@@ -1,7 +1,8 @@
 ### Matrix + Algebra + DataFrames
+ipython==8.2.0 
 numpy==1.21.2
 scipy==1.7.1
 pandas==1.4.1
 
-
-camaraPy==0.0.5
+#git+https://github.com/jonjoncardoso/camaraPy.git#egg=camaraPy
+#camaraPy==0.0.5

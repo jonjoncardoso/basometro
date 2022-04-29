@@ -78,8 +78,13 @@ def coletar_votos(start_year, end_year, warn_proposicao_acessoria = False, keep_
         votacoes = votacoes['proposicao']['Votacoes']['Votacao']
 
       except custom_exceptions.ProposicaoAcessoria as e:
+
         if warn_proposicao_acessoria:
           print(f"Exceção ProposicaoAcessoria aconteceu no id {id_proposicao}")
+        continue
+
+      except Exception as e:
+        print(f"request ObterVotacaoProposicao com params: {params} lancou um erro: {e}")
         continue
 
       # Se os dados vêm na forma de lista, a proposição em questão
